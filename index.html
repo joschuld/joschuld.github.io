@@ -25,7 +25,7 @@
             </nav>
            <div class="header-text">
             <h1>Hello!<br>I'm Joseph Schuld</h1>
-            <p1>Recent Bootcamp Grad</p1>
+            <p1>Software Developer</p1>
            </div>
         </div>
     </div>
@@ -51,21 +51,17 @@
 
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Front-end Web Development</span><br>JavaScript, HTML, CSS<br>Angular Framework</li>
+                            <li><span>Front-end Web Development</span><br>JavaScript<br>Angular<br>HTML & CSS</li>
                             <li><span>Back-end Web Development</span><br>Java<br>Spring Boot<br>Object-oriented Programming
-                                <br>MVC Design<br>Object-relational Mapping</li>
-                            <li>Python</li>
-                            <li>MySQL</li>
+                                <br>MVC Design<br>Object-relational Mapping<br>MySQL</li>
+                
                         </ul>
                     </div>
 
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Front-end Web Development</span><br>JavaScript, HTML, CSS<br>Angular Framework</li>
-                            <li><span>Back-end Web Development</span><br>Java<br>Spring Boot<br>Object-oriented Programming
-                                <br>MVC Design<br>Object-relational Mapping</li>
-                            <li>Python</li>
-                            <li>MySQL</li>
+                            <li><span>Student Software Developer</span><br>LaunchCode 2022-2023<br>LC101: A Fullstack Professional Development Bootcamp</li>
+                            <li><span>Biologist</span><br>Bayer Crop Sciences 2022-2023<br>Plant Health Research</li>
                         </ul>
                     </div>
 
@@ -83,7 +79,24 @@
         </div>
     </div>
 
+<script>
 
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for (tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+</script>
 
 
 </body>
