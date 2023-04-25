@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href ="styles.css">
+    <script src="https://kit.fontawesome.com/a7443965e1.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+
+    <!-- ----------HEADER------------- -->
 
     <!-- id syncs with style.css as #header -->
     <div id="header"> 
@@ -15,13 +19,15 @@
         <div class="container">
             <nav>
                 <img src ="images/logo2.PNG" class="logo">
-                <ul>
+                <ul id="sidemenu">
                     <!-- why use # in link? -->
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
            <div class="header-text">
             <h1>Hello!<br>I'm Joseph Schuld</h1>
@@ -30,6 +36,7 @@
         </div>
     </div>
 
+    <!-- --------------ABOUT--------------- -->
 
     <div id="about">
         <div class="container">
@@ -60,16 +67,29 @@
 
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Student Software Developer</span><br>LaunchCode 2022-2023<br>LC101: A Fullstack Professional Development Bootcamp</li>
-                            <li><span>Biologist</span><br>Bayer Crop Sciences 2022-2023<br>Plant Health Research</li>
+                            <li><span>Student Software Developer, LaunchCode 2022-2023</span>
+                                <br>LC101: A Fullstack Professional Development Bootcamp</li>
+
+                            <li><span>Biologist, Bayer Crop Sciences 2022-2023</span>
+                                <br>Responsible for maintaining and running experimental assays in coordination with research scientists.
+                                <br>Experienced in plant health and disease evaluation.
+                                <br>Utilizing aseptic technique in preparation of variety of media and the handling of pathogen cultures
+                                <br>Contribution toward project deadlines and data reporting.</li>
+
+                            <li><span>Microbiology & Chemistry Analyst, Certified Environmental Services 2020-2021</span>
+                                <br>Performing analyses on all incoming water and solid samples from local municipalities, homeowners, inspectors, and plumbers.
+                                <br>Experienced in testing for total coliform, fecal coliform, sulfate, nitrate, and nitrite concentrations across samples.</li>
+
+                            <li><span>Restaurant Server, Olive Garden 2019-2021</span>
+                                <br>Providing excellent service to guests by making sure their stay was as enjoyable as possible.</li>
                         </ul>
                     </div>
 
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Professional Web Development In JavaScript</span><br>LaunchCode, 2022</li>
-                            <li><span>Professional Web Development In Java</span><br>LaunchCode, 2023</li>
-                            <li><span>Illinois State University</span><br>Bachelor's of Science: Biological Science</li>
+                            <li><span>LaunchCode</span><br>LC101: Professional Web Development in Java 2023<br>LC101: Professional Web Development in JavaScript 2022</li>
+                            <li><span>Illinois State University</span><br>Bachelor's of Science: Biological Sciences 2018<br>
+                            <br>Schuld, J. 2018. Nutrient Preference in Leaf-cutter Ants. Invited presentation to the Integrative Biology Seminar Series, School of Biological Sciences, Illinois State University</li>
                             
                         </ul>
                     </div>
@@ -77,6 +97,69 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- -----------------PORTFOLIO------------ -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Portfolio</h1>
+            <div class="work-list">
+                <div class = "work">
+                    <img src="images/logo2.PNG">
+                    <div class ="layer">
+                        <h3>Project 1</h3>
+                        <p>A place for my first project to reside. This project will show off cool things I can do. Maybe If I impress you, you will hire me?</p>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Hmmm</a>
+                    </div>
+                </div>
+                <div class = "work">
+                    <img src="images/logo2.PNG">
+                    <div class ="layer">
+                        <h3>Project 2</h3>
+                        <p>A second project will go here, until then, this will have to do.</p>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Hmmm</a>
+                    </div>
+                </div>
+                <div class = "work">
+                    <img src="images/logo2.PNG">
+                    <div class ="layer">
+                        <h3>Project 3</h3>
+                        <p>Yet another placeholder for a third project. This one will also show something cool that I can do. Trust me?</p>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Hmmm</a>
+                    </div>
+                </div>
+            </div>
+            <!-- add see more button? -->
+        </div>
+    </div>
+
+    <!-- ----------------CONTACT--------------------------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>josephschuld18@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/joseph-schuld-a498b9134/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/SchuldResume2023.pdf" download class ="btn btn2">Download My Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    
+
     </div>
 
 <script>
@@ -95,9 +178,38 @@ function opentab(tabname){
     document.getElementById(tabname).classList.add("active-tab");
 }
 
-
 </script>
 
+<script>
+var sidemenu = document.getElementById("sidemenu");
+function openmenu(){
+    sidemenu.style.right = "0";
+
+}
+function closemenu(){
+    sidemenu.style.right = "-200px";
+    
+}
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwBPrhMaYFfiB8kYfBqsnfFwYzr7_SfEjQv8Z5elyhoVSb15_B2ENwYOmwFWNkqNKei/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg");
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = 'Submission Sent Successfully!'
+            setTimeout(function(){
+                msg.innerHTML =""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 </body>
 </html>
