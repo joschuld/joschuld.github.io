@@ -1,3 +1,3 @@
 # Personal Website/Portfolio
 
-Built using JavaScript, HTML, CSS, and Bootstrap
+Built using JavaScript, HTML, & CSS
